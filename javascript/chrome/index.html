@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chrome</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="nes.css">
+    <!-- <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" /> -->
 </head>
+
 <body>
-    
+
     <div class="js-clock">
-        <h1>00:00</h1>
+        <h3>00:00</h3>
+        <span class="js-weather"></span>
     </div>
     <form class="js-form form">
-        <input type="text" placeholder="what is your name?"/>
+        <input type="text" class="nes-input" placeholder="what is your name?" />
     </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do list!"/>
+    <h3 class="js-greetings greetings"></h3>
+    <form class="js-toDoForm form">
+        <input type="text" class="nes-input" placeholder="Write a to do list!" />
+        <button type="submit" class="nes-btn">+</button>
     </form>
     <ul class="js-toDoList">
-        
     </ul>
-    <span class="js-weather"></span>
     <script src="clock.js"></script>
     <script src="gretting.js"></script>
-    <script src="todo.js"></script> 
-    <script src="bg.js"></script> 
-    <script src="weather.js"></script> 
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
 </body>
+
 </html>
