@@ -1,0 +1,71 @@
+@import "reset.css";
+
+body {
+    background-color: #f6f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+padding-bottom: 50px;
+body		{ font-family: '-apple-system', sans-serif; }
+.normal		{ font-weight: 400 }
+.bold		{ font-weight: 700 }
+.bolder		{ font-weight: 800 }
+.light		{ font-weight: 300 }
+
+.canvas {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .controls_btns {
+    margin-bottom: 30px;
+}
+
+.controls_btns button {
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 20px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.controls_btns button:active {
+    transform: scale(0.9);
+}
+
+.controls .controls_colors{
+    display: flex;
+}
+
+.controls_colors .controls_colors {
+    margin: 0px 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.controls .controls_range{
+    margin-bottom: 20px;
+}
