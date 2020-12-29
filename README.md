@@ -1,5 +1,4 @@
-# TIL
-📝 Today I Learned   
+# Mini Project
 - javascript
   - chrome (크롬앱)
   - paintjs (그림판)
