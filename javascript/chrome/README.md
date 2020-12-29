@@ -9,7 +9,7 @@
 
    
 # view
-![](https://images.velog.io/images/nsunny0908/post/83cecb59-61c5-4fb5-916c-a8d6028d2099/view.gif)
+![](https://images.velog.io/images/nsunny0908/post/090a0ac6-fe21-42fe-b3d0-aa0c26d45232/view.gif)
 
 # Themes
 * Pink
