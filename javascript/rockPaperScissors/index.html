@@ -6,26 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가위바위보</title>
     <style>
+        body {
+            text-align: center;
+        }
+
         #computer {
+            margin: 0 auto;
             height: 340px;
             width: 270px;
             background: url('https://i2.ruliweb.com/img/19/12/01/16ebf9fceb62fc579.jpeg') 0 0;
         }
+
         #button-div {
             margin: 10px;
         }
+
         button {
             width: 100px;
             height: 50px;
             margin: 5px;
         }
-
     </style>
 </head>
 
 <body>
     <div id="computer">
-        <img src="" alt="">
+    </div>
+    <div id="score">
+        <h2></h2>
+        <span>이긴횟수 : 
+            <span id="win">0</span>
+            &emsp;
+        </span>
+        <span>진횟수 : 
+            <span id="lose">0</span>
+            &emsp;
+        </span>
+        <span>비긴횟수 : 
+            <span id="draw">0</span>
+        </span>
     </div>
     <div id="button-div">
         <button id="scissor" class="btn">가위</button>

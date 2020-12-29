@@ -48,14 +48,22 @@ document.querySelectorAll('.btn').forEach(function (btn) {
         var user = this.id;
         var userScore = score[user];
         var computerScore = score[computer(image)];
+        var scoreText = document.querySelector("#score > h2");
+        var winText = document.querySelector("#win");
+        var loseText = document.querySelector("#lose");
+        var drawText = document.querySelector("#draw");
+
 
         if(userScore - computerScore === 0) {
-            console.log('비겼습니다.😑');
+            scoreText.textContent = '비겼습니다.😑';
+            drawText.textContent++;
         } else if([-1, 2].includes(userScore - computerScore)) {
             // score[user] - score[computer(image)] === -1 || score[user] - score[computer(image)] === 2
-            console.log('이겼습니다.🥰');
+            scoreText.textContent = '이겼습니다.🥰';
+            winText.textContent++;
         } else {
-            console.log('졌습니다.😂');
+            scoreText.textContent = '졌습니다.😂';
+            loseText.textContent++;
         }
     });
 });
