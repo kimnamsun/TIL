@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지뢰찾기</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input id="hor" placeholder="가로" type="number" value=10>
+    <input id="ver" placeholder="세로" type="number" value=10>
+    <input id="mine" placeholder="지뢰" type="number" value=20>
+    <button id="exec">실행</button>
+    <table id="table">
+        <thead>
+            <tr>
+                <td><span id="timer">0</span>초</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="Minesweeper.js"></script>
+</body>
+</html>
