@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지뢰찾기</title>
     <style>
+        body {
+            text-align: center;
+        }
         table {
             border-collapse: collapse;
+            margin-top: 1rem;
         }
         td {
-            border: 1px solid black;
+            background-color: #222;
+            border: 1px solid #bbb;
             width: 30px;
             height: 30px;
+        }
+        td.opened {
+            background-color: white;
+        }
+        td.flag {
+            background-color: red;
+        }
+        td.question {
+            background-color: salmon;
+        }
+        td #timer {
+            margin-top: 1rem;
+        }
+        #result {
+            font-size: 40px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -28,6 +50,7 @@
         </thead>
         <tbody></tbody>
     </table>
+    <div id="result"></div>
     <script src="Minesweeper.js"></script>
 </body>
 </html>
