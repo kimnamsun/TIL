@@ -118,7 +118,7 @@ document.querySelector("#exec").addEventListener("click", function () {
                 //지뢰인 경우
                 if (dataset[row][col] === dataDictionary.bomb) {
                     e.currentTarget.textContent = '💣';
-                    document.querySelector('#result').textContent = '실패😂';
+                    document.querySelector('#result').textContent = '게임오버😂';
                     stopFlag = true;
                 } else {
                     //지뢰가 아닌 경우 주변 지뢰 개수 세기 

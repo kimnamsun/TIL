@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응속도 테스트</title>
+    <style>
+        div {
+            font-size: 30px;
+            text-align:center;
+        }
+        #wrap {
+            display: table;
+            margin: 3rem auto;
+        }
+
+        #screen {
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            user-select: none;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #screen.waiting {
+            background-color: #00c9b8;
+        }
+
+        #screen.ready {
+            background-color: #d2202f;
+            color: white;
+        }
+
+        #screen.now {
+            background-color: #94d736;
+        }
+
+        #result {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="screen" class="waiting">
+            클릭해서 시작하세요!
+        </div>
+    </div>
+    <div id="result"></div>
+</body>
+<script src="./ReactionRate.js"></script>
+
+</html>

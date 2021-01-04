@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,42 @@
     <style>
         body {
             text-align: center;
+            padding: 3rem;
         }
+
         table {
             border-collapse: collapse;
-            margin-top: 1rem;
+            margin: 3rem auto;
         }
+
         td {
-            background-color: #222;
+            background-color: #121212;
             border: 1px solid #bbb;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
         }
+
         td.opened {
             background-color: white;
         }
+
         td.flag {
             background-color: red;
         }
+
         td.question {
             background-color: salmon;
         }
+
         td #timer {
             margin-top: 1rem;
         }
+
+        .timerTd {
+            background-color: white;
+        }
+
         #result {
             font-size: 40px;
             margin-top: 1rem;
@@ -37,21 +51,25 @@
         }
     </style>
 </head>
+
 <body>
+    <label for="hor">가로</label>
     <input id="hor" placeholder="가로" type="number" value=10>
+
+    <label for="ver">세로</label>
     <input id="ver" placeholder="세로" type="number" value=10>
+
+    <label for="mine">지뢰갯수  </label>
     <input id="mine" placeholder="지뢰" type="number" value=20>
-    <button id="exec">실행</button>
+
+    <button id="exec">게임시작!</button>
     <table id="table">
         <thead>
-            <tr>
-                <td><span id="timer">0</span>초</td>
-            </tr>
         </thead>
         <tbody></tbody>
     </table>
     <div id="result"></div>
     <script src="Minesweeper.js"></script>
 </body>
-</html>
 
+</html>
