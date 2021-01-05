@@ -4,6 +4,7 @@
   - [paintjs](https://github.com/kimnamsun/miniproject/tree/master/javascript/paintjs) (그림판)
   - [ticTacToe](https://github.com/kimnamsun/miniproject/tree/master/javascript/ticTacToe) (틱택토)
   - [rockPaperScissors](https://github.com/kimnamsun/miniproject/tree/master/javascript/rockPaperScissors) (가위바위보게임)
+  - [Minesweeper](https://github.com/kimnamsun/miniproject/tree/master/javascript/Minesweeper) (지뢰찾기)
   - [ReactionRate](https://github.com/kimnamsun/miniproject/tree/master/javascript/ReactionRate) (반응속도 측정하기)
   
 - [react](https://github.com/kimnamsun/miniproject/tree/master/react)
