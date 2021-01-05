@@ -6,6 +6,7 @@
   - [rockPaperScissors](https://github.com/kimnamsun/miniproject/tree/master/javascript/rockPaperScissors) (가위바위보게임)
   - [Minesweeper](https://github.com/kimnamsun/miniproject/tree/master/javascript/Minesweeper) (지뢰찾기)
   - [ReactionRate](https://github.com/kimnamsun/miniproject/tree/master/javascript/ReactionRate) (반응속도 측정하기)
+  - [card](https://github.com/kimnamsun/miniproject/tree/master/javascript/card) (카드 짝맞추기 게임)
   
 - [react](https://github.com/kimnamsun/miniproject/tree/master/react)
   - [movieapp](https://github.com/kimnamsun/miniproject/tree/master/react/movie-app) (영화 웹 서비스)
