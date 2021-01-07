@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하스스톤</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>하스스톤</title>
+  <style>
+    body {
+      font-size: 20px;
+    }
+    .fontSize, #rival-cost, #my-cost {
+      font-size: 28px;
+    }
+    #my, #rival {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10rem;;
+    }
+    #rival {
+      vertical-align: bottom;
+    }
+    #my-deck, #rival-deck {
+      display: inline-block;
+      vertical-align: top;
+      width: 400px;
+    }
+    #rival-deck,
+    #rival-hero,
+    #rival-cards,
+    #my-deck,
+    #my-hero,
+    #my-cards {
+      text-align: center;
+    }
+    .card {
+      width: 100px;
+      height: 150px;
+      display: inline-block;
+      position: relative;
+      border: 1px solid black;
+      margin: 0.5rem;
+    }
+    .card-att,
+    .card-hp, .card-cost {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      border: 1px solid black;
+      font-weight: bold;
+    }
+    .card-cost {
+      left: 0;
+      bottom: auto;
+      top: 0;
+      background-color: blue;
+      color: white;
+    }
+    .card-att {
+      left: 0;
+      background-color: yellow;
+    }
+    .card-hp {
+      right: 0;
+      background-color: red;
+      color: white;
+    }
+    .card-hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
- 
+  <div id="rival">
+    <div id="rival-cost">코스트 : <span>10</span></div>
+    <div id="rival-hero">
+    </div>
+    <div id="rival-cards" style="height: 200px">
+      
+    </div>
+  </div>
+  <div id="rival-deck">
+    <div class="fontSize">덱</div>
+  </div>
+  <hr>
+  <div id="my">
+    <div id="my-cards" style="height: 200px"> </div>
+    <div id="my-hero">
+    </div>
+    <div id="my-cost">코스트 : <span>10</span></div>
+  </div>
+  <div id="my-deck">
+    <div class="fontSize">덱</div>
+  </div>
+  <div class="card-hidden">
+    <div class="card">
+      <div class="card-cost"></div>
+      <div class="card-att"></div>
+      <div class="card-hp"></div>
+    </div>
+  </div>
+  <script src="./Hearthstone.js"></script>
 </body>
-<script src="./Hearthstone.js"></script>
 </html>
