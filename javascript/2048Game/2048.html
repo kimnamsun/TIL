@@ -7,8 +7,9 @@
     <style>
         #table {
             border-collapse: collapse;
-            margin: 1rem;
+            margin: 2rem auto;
             text-align: center;
+            user-select: none;
         }
         #table td {
             border: 1px solid black;
@@ -17,11 +18,15 @@
             font-size: 30px;
             font-weight: bold;
         }
+        #score {
+            font-size: 30px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <table id="table"></table>
-    <div id="score"></div>
+        <table id="table"></table>
+        <div id="score">0</div>
 </body>
 <script src="./2048.js"></script>
 </html>
