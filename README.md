@@ -9,6 +9,7 @@
   - [card](https://github.com/kimnamsun/miniproject/tree/master/javascript/card) (카드 짝맞추기 게임)
   - [Hearthstone](https://github.com/kimnamsun/miniproject/tree/master/javascript/Hearthstone) (하스스톤)
   - [2048Game](https://github.com/kimnamsun/miniproject/tree/master/javascript/2048Game) (2048 게임)
+  - [tetris](https://github.com/kimnamsun/miniproject/tree/master/javascript/tetris) (테트리스)
   
 - [react](https://github.com/kimnamsun/miniproject/tree/master/react)
   - [movieapp](https://github.com/kimnamsun/miniproject/tree/master/react/movie-app) (영화 웹 서비스)
