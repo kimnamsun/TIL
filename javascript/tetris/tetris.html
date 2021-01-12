@@ -6,12 +6,32 @@
     <title>테트리스</title>
     <style>
         #tetris {
+            margin: 1rem auto;
+        }
+        .wrap {
+            text-align: center;
+        }
+        .wrap div {
+            margin: 1rem;
+        }
+        #tetris,
+        #next-table {
             border-collapse: collapse;
+        }
+        #next-table {
+            position: absolute;
+            right: 10px;
+            top: 10px;
         }
         #tetris td {
             border: 1px solid black;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
+        }
+        #next-table td {
+            border: 1px solid black;
+            width: 15px;
+            height: 15px;
         }
         td.white {
             background-color: white;
@@ -37,10 +57,48 @@
         td.yellow {
             background-color: yellow;
         }
+        td.black {
+            background-color: black;
+        }
     </style>
 </head>
 <body>
-    <table id="tetris"></table>
+    <table id="tetris">
+    </table>
+    <table id="next-table">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div class="wrap">
+        <button id="stop">중단</button>
+        <button id="start">재개</button>
+        <button id="mute">소리끔</button>
+        <div>점수: <span id="score">0</span></div>
+    </div>
+    <!-- <audio id="bgm" src="./Tetris_theme.ogg.mp3" autoplay></audio> -->
+    <script src="./tetris.js"></script>
+
 </body>
-<script src="./tetris.js"></script>
 </html>
