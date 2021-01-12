@@ -220,7 +220,6 @@ function init() {
 }
 
 function draw() {
-  console.log('drawed', JSON.parse(JSON.stringify(tetrisData)), JSON.parse(JSON.stringify(currentBlock)));
   tetrisData.forEach((col, i) => {
     col.forEach((row, j) => {
       if (row > 0) {
@@ -254,7 +253,6 @@ function generate() { // 테트리스 블록 생성
   }
   currentBlock.currentShapeIndex = 0;
   nextBlock = blocks[Math.floor(Math.random() * blocks.length)]; // 다음 블록 미리 생성
-  console.log(currentBlock);
   drawNext();
   currentTopLeft = [-1, 3];
   let isGameOver = false;
@@ -266,14 +264,12 @@ function generate() { // 테트리스 블록 생성
     });
   });
   currentBlock.shape[0].slice(1).forEach((col, i) => { // 블록 데이터 생성
-    console.log(currentBlock.shape[0], currentBlock.shape[0].slice(1), col);
     col.forEach((row, j) => {
       if (row) {
         tetrisData[i][j + 3] = currentBlock.numCode;
       }
     });
   });
-  console.log('generate', JSON.parse(JSON.stringify(currentBlock)));
   if (isGameOver) {
     // clearInterval(int);
     draw();
@@ -305,7 +301,6 @@ function checkRows() { // 한 줄 다 찼는지 검사
   for (let i = 0; i < fullRowsCount; i++) {
     tetrisData.unshift([0,0,0,0,0,0,0,0,0,0]);
   }
-  console.log(fullRows, JSON.parse(JSON.stringify(tetrisData)));
   let score = parseInt(document.getElementById('score').textContent, 10);
   score += fullRowsCount ** 2;
   document.getElementById('score').textContent = String(score);
@@ -319,11 +314,9 @@ function tick() { // 한 칸 아래로
   for (let i = currentTopLeft[0]; i < currentTopLeft[0] + currentBlockShape.length; i++) { // 아래 블럭이 있으면
     if (i < 0 || i >= 20) continue;
     for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
-      console.log(i, j);
       if (isActiveBlock(tetrisData[i][j])) { // 현재 움직이는 블럭이면
         activeBlocks.push([i, j]);
         if (isInvalidBlock(tetrisData[i + 1] && tetrisData[i + 1][j])) {
-          console.log('아래 블럭이 있다!', i, j, tetrisData[i][j], tetrisData[i + 1] && tetrisData[i + 1][j], JSON.parse(JSON.stringify(tetrisData)));
           canGoDown = false;
         }
       }
@@ -384,19 +377,16 @@ window.addEventListener('keydown', (e) => {
         for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
           if (!tetrisData[i] || !tetrisData[i][j]) continue;
           if (isActiveBlock(tetrisData[i][j]) && isInvalidBlock(tetrisData[i] && tetrisData[i][j - 1])) {
-            console.log(i, j, tetrisData[i][j], tetrisData[i][j-1]);
             isMovable = false;
           }
         }
       }
-      console.log('left', 'isMovable', isMovable);
       if (isMovable) {
         currentTopLeft = nextTopLeft;
         tetrisData.forEach((col, i) => {
           for (var j = 0; j < col.length; j++) {
             const row = col[j];
             if (tetrisData[i][j - 1] === 0 && row < 10) {
-              console.log(row, tetrisData[i][j - 1], i, j);
               tetrisData[i][j - 1] = row;
               tetrisData[i][j] = 0;
             }
@@ -415,12 +405,10 @@ window.addEventListener('keydown', (e) => {
         for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
           if (!tetrisData[i] || !tetrisData[i][j]) continue;
           if (isActiveBlock(tetrisData[i][j]) && isInvalidBlock(tetrisData[i] && tetrisData[i][j + 1])) {
-            console.log(i, j);
             isMovable = false;
           }
         }
       }
-      console.log('right', 'isMovable', isMovable);
       if (isMovable) {
         currentTopLeft = nextTopLeft;
         tetrisData.forEach((col, i) => {
@@ -456,14 +444,11 @@ window.addEventListener('keyup', (e) => {
         for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
           if (!tetrisData[i]) continue;
           if (nextBlockShape[i - currentTopLeft[0]][j - currentTopLeft[1]] > 0 && isInvalidBlock(tetrisData[i] && tetrisData[i][j])) {
-            console.log(i, j);
             isChangeable = false;
           }
         }
       }
-      console.log('isChangeable', isChangeable);
       if (isChangeable) {
-        console.log('isChangeable', JSON.parse(JSON.stringify(currentBlock)), nextBlockShape);
         while (currentTopLeft[0] < 0) {
           tick();
         }
