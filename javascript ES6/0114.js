@@ -6,6 +6,7 @@ const SETTING = {
     count: 6,
     maxNumber: 45
 }
+
 function getRandomNumber(count, maxNumber) {
     let mySet = new Set();
   
@@ -15,8 +16,10 @@ function getRandomNumber(count, maxNumber) {
     }
     console.log(mySet);
 }
+
 let { count, maxNumber } = SETTING;
 getRandomNumber(count, maxNumber);
+
 
 //풀이2.
 const SETTING = {
