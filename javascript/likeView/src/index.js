@@ -1,1 +1,6 @@
-console.log("start project by webpack");
+const myfun = () => {
+    let name = "nsunny";
+    console.log(`my name is ${name}`);
+}
+
+myfun();
