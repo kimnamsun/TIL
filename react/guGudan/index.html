@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        #root {
+            text-align: center;
+        }
+
+        input[type=number] {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class GuGuDan extends React.Component {
+            state = {
+                first: Math.ceil(Math.random() * 9),
+                second: Math.ceil(Math.random() * 9),
+                value: '',
+                result: '',
+            };
+
+            onSubmit = (e) => {
+                e.preventDefault();
+                if (parseInt(this.state.value) === this.state.first * this.state.second) {
+                    this.setState( (prevState) => {
+                        return {
+                            first: Math.ceil(Math.random() * 9),
+                            second: Math.ceil(Math.random() * 9),
+                            value: '',
+                            result: `${prevState.value} 정답🥰`,
+                        };
+                    });
+                } else {
+                    this.setState({
+                        value: '',
+                        result: '땡😢',
+                    });
+                }
+                this.input.focus();
+            };
+
+            onChange = (e) => {
+                this.setState({ value: e.target.value });
+            };
+
+            input;
+
+            onRefInput = (c) => { this.input = c; };
+
+            render() {
+                return (
+                    <React.Fragment>
+                        <h3>{this.state.first} ✖ {this.state.second} = ❓</h3>
+                        <form onSubmit={this.onSubmit}>
+                            <input ref={this.onRefInput} type="number" value={this.state.value} onChange={this.onChange} />
+                            <button>입력!</button>
+                        </form>
+                        <h3>{this.state.result}</h3>
+                    </React.Fragment>
+                );
+            }
+        }
+    </script>
+    <script type="text/babel">
+        ReactDOM.render(<GuGuDan />, document.querySelector('#root'));
+    </script>
+</body>
+
+</html>
