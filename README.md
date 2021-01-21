@@ -15,3 +15,4 @@
   - [movieapp](https://github.com/kimnamsun/miniproject/tree/master/react/movie-app) (영화 웹 서비스)
   - [fokin-weather](https://github.com/kimnamsun/miniproject/tree/master/react/fokin-weather) (react-native로 만드는 날씨앱)
   - [guGudan](https://github.com/kimnamsun/miniproject/tree/master/react/guGudan) (구구단)
+  - [wordRelay](https://github.com/kimnamsun/miniproject/tree/master/react/wordRelay) (끝말잇기)
