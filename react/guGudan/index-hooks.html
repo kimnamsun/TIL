@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 - Hooks</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        #root {
+            text-align: center;
+        }
+        input[type=number] {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const GuGuDan = () => {
+            const [first, setFirst] = React.useState(Math.ceil(Math.random() * 9));
+            const [second, setSecond] = React.useState(Math.ceil(Math.random() * 9));
+            const [value, setValue] = React.useState('');
+            const [result, setResult] = React.useState('');
+            const inputRef = React.useRef(null);
+
+            const onChangeInput = (e) => {
+                setValue(e.target.value);
+            };
+
+            const onSubmitForm = (e) => {
+                e.preventDefault();
+                if (parseInt(value) === first * second) {
+
+                    //옛날 result를 사용하는 경우 함수로 간단하게 표현할 수 있따.
+                    setResult((prevResult) => {
+                        return `${value} 정답🥰`;
+                    });
+                    setFirst(Math.ceil(Math.random() * 9));
+                    setSecond(Math.ceil(Math.random() * 9));
+                    setValue('');
+
+                } else {
+                    setValue('');
+                    setResult('땡😢');
+                }
+                inputRef.current.focus();
+            };
+
+            return (
+                <React.Fragment>
+                    <h3>{first} ✖ {second} = ❓</h3>
+                    <form onSubmit={onSubmitForm}>
+                        <input ref={inputRef} type="number" value={value} onChange={onChangeInput} />
+                        <button>입력!</button>
+                    </form>
+                    <h3>{result}</h3>
+                </React.Fragment>
+            );
+        }
+    </script>
+    <script type="text/babel">
+        ReactDOM.render(<GuGuDan />, document.querySelector('#root'));
+    </script>
+</body>
+
+</html>
