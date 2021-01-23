@@ -16,3 +16,4 @@
   - [fokin-weather](https://github.com/kimnamsun/miniproject/tree/master/react/fokin-weather) (react-native로 만드는 날씨앱)
   - [guGudan](https://github.com/kimnamsun/miniproject/tree/master/react/guGudan) (구구단)
   - [wordRelay](https://github.com/kimnamsun/miniproject/tree/master/react/wordRelay) (끝말잇기)
+  - [numberBaseball](https://github.com/kimnamsun/miniproject/tree/master/react/numberBaseball) (숫자야구)
