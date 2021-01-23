@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+//process.env.NODE_ENV 'production'; //배포모드일때
+
 
 module.exports = {
-    mode: 'development', 
+    mode: 'development', //배포할때는 production
     devtool: 'eval', //개발때는 eval, production일때는 hidden-source-map
     resolve: {
         extensions: ['.js', '.jsx']

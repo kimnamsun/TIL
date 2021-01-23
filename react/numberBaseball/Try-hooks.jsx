@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const Try = ({ tryInfo }) => {
+const Try = memo(({ tryInfo }) => {
     return (
         <li>
             {tryInfo.try}
             <div>➡ {tryInfo.result}</div>
         </li>
     )
-};
+});
 
 export default Try;

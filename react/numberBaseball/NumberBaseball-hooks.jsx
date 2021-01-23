@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Try from './Try-hooks';
 
 
@@ -18,6 +18,7 @@ const NumberBaseball = () => {
     const [value, setValue] = useState('');
     const [answer, setAnswer] = useState(getNumbers());
     const [tries, setTries] = useState([]);
+    const inputRef = useRef(null);
 
     const onSubmitForm = (e) => {
         e.preventDefault();
@@ -65,7 +66,7 @@ const NumberBaseball = () => {
         <>
         <h1>{result}</h1>
         <form onSubmit={onSubmitForm}>
-            <input maxLength={4} value={value} onChange={onChangeInput} />
+            <input ref={inputRef} minLength={4} maxLength={4} value={value} onChange={onChangeInput} />
         </form>
         <h3>시도 : {tries.length}</h3>
         <ul>
