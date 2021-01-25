@@ -25,7 +25,7 @@ const computerChoice = (imgCoord) => {
 class RSP extends Component {
     state = {
         result: '',
-        imgCoord: '0',
+        imgCoord: rspCoords.rock,
         score: 0,
         win: 0,
         lose: 0,
@@ -40,7 +40,7 @@ class RSP extends Component {
     }
 
     componentWillUnmount() { //컴포넌트가 제거되기 직전, 비동기 요청 정리 
-
+        clearInterval(this.interval);
     }
 
     changeHand = () => {
