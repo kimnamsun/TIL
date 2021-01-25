@@ -20,7 +20,7 @@ const ResponseCheck = () => {
             }, Math.floor(Math.random() * 1000) + 2000); //2~3초 랜덤 
             
         } else if (state === 'ready') { //성급하게 클릭 
-            clearTimeout(this.timeout); //타임아웃 제거 
+            clearTimeout(timeout.current); //타임아웃 제거 
             setState('waiting');
             setMessage('너무 성급하시군요😑 다시 클릭해주세요.')
             
