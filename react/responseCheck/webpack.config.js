@@ -25,7 +25,7 @@ module.exports = {
                             debug: true, 
                         }],
                         '@babel/preset-react'],
-                    plugins: ['react-refresh/babel'], 
+                    plugins: ['@babel/plugin-proposal-class-properties', 'react-refresh/babel'], 
                 }, 
             }, 
         ],
