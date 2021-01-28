@@ -20,3 +20,4 @@
   - [responseCheck](https://github.com/kimnamsun/miniproject/tree/master/react/responseCheck) (반응속도 측정하기)
  - [rockPaperScissors](https://github.com/kimnamsun/miniproject/tree/master/react/rockPaperScissors) (가위바위보게임)
  - [lotto](https://github.com/kimnamsun/miniproject/tree/master/react/lotto) (로또추첨기)
+ - [ticTacToe](https://github.com/kimnamsun/miniproject/tree/master/react/ticTacToe) (틱택토)
