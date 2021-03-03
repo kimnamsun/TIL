@@ -16,3 +16,12 @@
     from { opacity: 1;}
     to { opacity: 0;}
 }
+
+.fadeIn {
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+.fadeOut {
+    animation: fadeOut;
+    animation-duration: 0.5s;
+}
